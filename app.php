@@ -1,5 +1,5 @@
 <?php
-require_once('./backup_cron.php');
+require_once('./BackUp.php');
 
 $backup = new BackUp('src',"destination");
 $backup->export_database('db_name','username','password');
