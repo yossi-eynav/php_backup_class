@@ -40,8 +40,8 @@ class BackUp{
     }
 
     function  export_database($dbname,$username,$password){
-        exec("mysqldump -u $username -p$password $dbname > $this->destFolder/sql_backup.sql",$output=array(),$worked);
-        echo $worked;
+        exec("mysqldump -u $username -p$password $dbname > $this->destFolder/sql_backup.sql",$output=array(),$success);
+        echo $success;
 
     }
 
