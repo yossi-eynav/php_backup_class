@@ -12,7 +12,7 @@ class BackUp{
 
 
 
-    function copy_files(){
+    public function copy_files(){
 
         echo "<br/><br/><strong>STARTING RECURSION </strong><br/><br/>";
         flush();
@@ -39,9 +39,9 @@ class BackUp{
         return;
     }
 
-    function  export_database($dbname,$username,$password){
-        exec("mysqldump -u $username -p$password $dbname > $this->destFolder/sql_backup.sql",$output=array(),$worked);
-        echo $worked;
+    public function  export_database($dbname,$username,$password){
+        exec("mysqldump -u $username -p$password $dbname > $this->destFolder/sql_backup.sql",$output=array(),$success);
+        echo $success;
 
     }
 
